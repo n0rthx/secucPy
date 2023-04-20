@@ -2,7 +2,6 @@
 # coding=utf8
 
 
-
 import socket
 import sys
 from numba import jit
@@ -13,14 +12,14 @@ def classic_client_transfer(host:str, port:int, message, recvValue:int = 1024, _
     # it is use classic transfer method
 
 
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as socket: 
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sct: 
         
-        socket.connect((host, port))
-        socket.sendall(message)
+        sct.connect((host, port))
+        sct.sendall(message)
 
         if _return == True:
             
-            data = socket.recv(recvValue)
+            data = sct.recv(recvValue)
             return data
 
 
