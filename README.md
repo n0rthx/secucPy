@@ -8,6 +8,9 @@ pip install secucPy
 
 ```
 
+*NOTE:* PyPi is updated every Sunday
+
+
 ## Example
 
 ```
