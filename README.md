@@ -11,10 +11,10 @@ pip install secucPy
 ## Example
 
 ```
-from secucpy.client import transfer
+from client import transfer
 
-host: "127.0.0.1
-port:8080
+host = "127.0.0.1
+port = 8080
 message = "Hello SecucPy"
 
 transfer.classic_client_transfer(host, port, message)
