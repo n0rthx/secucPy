@@ -9,6 +9,7 @@ pip install secucPy
 ```
 
 *NOTE:* PyPi is updated every Sunday
+*Current Version:* 0.2[22.04.2023] 
 
 
 ## Example
