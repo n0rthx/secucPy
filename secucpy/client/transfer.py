@@ -147,12 +147,14 @@ class FileTransfer:
          
 
          # Classic file transfer method
+         # Requires a compatible server
          with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sct:
               
               sct.connect((host, port))
 
               sendFile = open(filePath, 'rb')
               sct.sendfile(sendFile)
+
 
 
 

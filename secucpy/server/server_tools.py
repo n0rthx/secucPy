@@ -54,3 +54,26 @@ class Create:
             print("connected user: " + str(data))
 
         connection.close()   
+
+
+    def Suitable_File_Transfer(file, host:str, port:int, recv:int = 1024):
+
+        server = socket.socket()
+        server.bind((host, port))
+
+        connection, adress = server.accept()
+
+        with open(file, "wb") as file: 
+
+            while True: 
+
+                byte = server.recv(recv)
+
+                if not byte: 
+
+                    print("***NO DATA***")
+
+                file.write(byte)
+
+                server.close()
+
